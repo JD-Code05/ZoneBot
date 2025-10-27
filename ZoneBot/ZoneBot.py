@@ -17,4 +17,3 @@ from googleapiclient.discovery import build
 # This part is to define the bot and its intents. The Message Content is needed for reading commands.
 intents = discord.Intents.default()
 intents.message_content = True 
-#test
