@@ -8,10 +8,10 @@ from googleapiclient.discovery import build
 #For the Configuration
 # Values to be filled: Discord Bot Token, Youtube API Key, Youtube Channel ID and Notification Channel ID
 
-DISCORD_BOT_TOKEN # = Discord Bot Token Here
-YOUTUBE_API_KEY # = Youtube API Key Here
-YOUTUBE_CHANNEL_ID # = Youtube Channel ID Here
-NOTIFICATION_CHANNEL_ID # =  #Notificaiton ID Here
+# DISCORD_BOT_TOKEN = Discord Bot Token Here
+# YOUTUBE_API_KEY = Youtube API Key Here
+# YOUTUBE_CHANNEL_ID = Youtube Channel ID Here
+# NOTIFICATION_CHANNEL_ID =  #Notificaiton ID Here
 
 # For the Bot Setup
 # This part is to define the bot and its intents. The Message Content is needed for reading commands.
