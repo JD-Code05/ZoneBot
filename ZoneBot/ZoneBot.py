@@ -17,3 +17,10 @@ from googleapiclient.discovery import build
 # This part is to define the bot and its intents. The Message Content is needed for reading commands.
 intents = discord.Intents.default()
 intents.message_content = True 
+bot = commands.Bot(command_prefix='!', intents=intents)
+
+@bot.event
+async def on_ready():
+    print(f'Logged in as {bot.user}')
+    check_for_new_videos.start() #Start the background task to check for new videos
+    print('Bot is ready and tracking Youtube Channel.')
