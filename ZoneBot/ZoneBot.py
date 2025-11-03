@@ -27,5 +27,11 @@ async def on_ready():
 
 #For running the Bot
 #Important line(Remove Later)
+try:
+    bot.run(DISCORD_BOT_TOKEN) except discord.LoginFailure:
+        print("Error: Invalid DISCORD_BOT_TOKEN. Please check your token and try again.")
+except Exception as e:
+print(f"Am error occurred: {e}")
+
 
 
