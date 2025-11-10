@@ -19,6 +19,14 @@ intents = discord.Intents.default()
 intents.message_content = True 
 bot = commands.Bot(command_prefix='!', intents=intents)
 
+# Build the Youtube Service Object: Remove the (#) After This
+# if YOUTUBE_API_KEY != Youtube API Key Here:
+#  youtube = build('youtube', 'v3', developerKey = YOUTUBE_API_KEY)
+# else:
+#  youtube = None
+
+#  last_known_video_id = None
+
 @bot.event
 async def on_ready():
     print(f'Logged in as {bot.user}')
@@ -33,6 +41,7 @@ try:
         print("Error: Invalid DISCORD_BOT_TOKEN. Please check your token and try again.")
 except Exception as e:
 print(f"An error occurred: {e}")
+
 
 
 
