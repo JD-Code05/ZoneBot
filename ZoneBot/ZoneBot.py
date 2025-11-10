@@ -29,9 +29,12 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 
 @bot.event
 async def on_ready():
-    print(f'Logged in as {bot.user}')
-    # check_for_new_videos.start() #Start the background task to check for new videos
-    print('Bot is ready and tracking Youtube Channel.')
+    print(f' Logged in as {bot.user}')
+    if youtube:
+        check_for_new_videos.start()
+        print(' Bot is ready and tracking YouTube channel.')
+    else:
+        print(' Bot is ready, but YouTube tracking is OFF (API key not set).')
 
 #For running the Bot
 #Important line(Remove Later)
@@ -41,6 +44,7 @@ try:
         print("Error: Invalid DISCORD_BOT_TOKEN. Please check your token and try again.")
 except Exception as e:
 print(f"An error occurred: {e}")
+
 
 
 
