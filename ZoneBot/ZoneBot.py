@@ -3,6 +3,7 @@ from discord.ext import commands, tasks
 import yt_dlp
 import asyncio
 import os
+import subprocess
 from googleapiclient.discovery import build
 
 #For the Configuration
@@ -44,6 +45,7 @@ try:
         print("Error: Invalid DISCORD_BOT_TOKEN. Please check your token and try again.")
 except Exception as e:
 print(f"An error occurred: {e}")
+
 
 
 
