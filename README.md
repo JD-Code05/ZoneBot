@@ -8,7 +8,8 @@ This is a personal Discord bot built with Python to help manage a YouTube channe
 
 * **Video Downloader:** Download any YouTube video (especially Shorts) directly into a Discord channel.
 * **Channel Stats:** Fetch and display current subscriber, view, and video counts for your channel.
-* **Upload Notifier:** Automatically checks your YouTube channel every 5 minutes and posts an alert in a specific Discord channel when a new video is uploaded.  
+* **Upload Notifier:** Automatically checks your YouTube channel every 5 minutes and posts an alert in a specific Discord channel when a new video is uploaded.
+* **Video Clipper:** Instead of Downloading the whole Youtube Video it only downloads a portion based on the timeline the user command.
 
 ## Status  
 ### 1. Installing Libraries  
