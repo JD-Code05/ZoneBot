@@ -51,6 +51,10 @@ async def check_for_new_videos():
     global last_known_video_id, youtube
     if not youtube:
         return
+    try:
+        # STEP 1: Get the "Uploads" Playlist ID for the Channel
+        # Every Youtube Channel has a hidden playlist that contains all uploads
+        # We ask the API for the "contentDetails" of the channel to find this playlist ID.
 
 #For running the Bot
 #Important line(Remove Later)
@@ -60,6 +64,7 @@ try:
         print("Error: Invalid DISCORD_BOT_TOKEN. Please check your token and try again.")
 except Exception as e:
 print(f"An error occurred: {e}")
+
 
 
 
