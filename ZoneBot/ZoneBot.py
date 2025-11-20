@@ -45,6 +45,13 @@ async def on_ready():
     else:
         print(' Bot is ready, but YouTube tracking is OFF (API key not set).')
 
+# Background Task to Check for New Videos
+@tasks.loop(minutes=5)
+async def check_for_new_videos():
+    global last_known_video_id, youtube
+    if not youtube:
+        return
+
 #For running the Bot
 #Important line(Remove Later)
 #This is still a temp or WIP 
@@ -53,6 +60,7 @@ try:
         print("Error: Invalid DISCORD_BOT_TOKEN. Please check your token and try again.")
 except Exception as e:
 print(f"An error occurred: {e}")
+
 
 
 
