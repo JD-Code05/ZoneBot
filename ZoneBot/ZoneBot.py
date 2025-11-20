@@ -6,6 +6,14 @@ import os
 import subprocess
 from googleapiclient.discovery import build
 
+# import discord - The main library for interacting with Discord
+# from discord.ext import commands, tasks - helps create commands and it helps run background loops
+# import yt_dlp - The library that does the heavy lifting of downloading videos from YouTube
+# import asyncio - A standard Python Library for handling asynchronous operations, (doing multiple things at once)
+# import os - Allows Python to talk to your computer's operating system (to handle files, to delete filesm check file sizes, etc)
+# import subprocess -  Allows Python to run other progras on your computer (Like FFMPEG) in the command line
+# from googleapiclient.discovery import build - Official Google Library to talk to Youtube's API
+
 #For the Configuration
 # Values to be filled: Discord Bot Token, Youtube API Key, Youtube Channel ID and Notification Channel ID
 
@@ -45,6 +53,7 @@ try:
         print("Error: Invalid DISCORD_BOT_TOKEN. Please check your token and try again.")
 except Exception as e:
 print(f"An error occurred: {e}")
+
 
 
 
