@@ -12,7 +12,7 @@ This is a personal Discord bot built with Python to help manage a YouTube channe
 * **Video Clipper:** Instead of Downloading the whole YouTube video it only downloads a portion based on the timeline the user commands.
 
 ## Status  
-### 1. Installing Libraries  
+### 1. Installing Libraries for the Bot 
 `` py -m pip install discord.py yt-dlp google-api-python-client``  
 
 
