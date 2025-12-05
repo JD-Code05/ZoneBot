@@ -26,6 +26,8 @@ from googleapiclient.discovery import build
 # This part is to define the bot and its intents. The Message Content is needed for reading commands.
 intents = discord.Intents.default()
 intents.message_content = True 
+
+
 bot = commands.Bot(command_prefix='!', intents=intents)
 
 # Build the Youtube Service Object: Remove the (#) After This
@@ -55,7 +57,11 @@ async def check_for_new_videos():
         # STEP 1: Get the "Uploads" Playlist ID for the Channel
         # Every Youtube Channel has a hidden playlist that contains all uploads
         # We ask the API for the "contentDetails" of the channel to find this playlist ID.
+        request = youtube.channels().list(part='contentDetails', id=YOUTUBE_CHANNEL_ID)
+        response = request.excecute()
 
+
+    
 #For running the Bot
 #Important line(Remove Later)
 #This is still a temp or WIP 
@@ -64,14 +70,3 @@ try:
         print("Error: Invalid DISCORD_BOT_TOKEN. Please check your token and try again.")
 except Exception as e:
 print(f"An error occurred: {e}")
-
-
-
-
-
-
-
-
-
-
-
